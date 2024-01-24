@@ -29,6 +29,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "rules": {
+    "react/prop-types": "off"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",

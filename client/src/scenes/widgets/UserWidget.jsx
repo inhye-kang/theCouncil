@@ -32,7 +32,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
     useEffect(() => {
         getUser();
-    }, []) //eslint-disable-line react-hooks/exhaustive-deps
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
     if (!user) {
         return null;
@@ -120,10 +120,10 @@ const UserWidget = ({ userId, picturePath }) => {
                     </Typography>
                     <FlexBetween gap="1rem" mb="0.5rem">
                         <FlexBetween gap="1rem">
-                            <img src="../assets/instagram.png" alt="instagram" />
+                            <img src="../assets/twitter.png" alt="twitter" />
                             <Box>
                                 <Typography color={main} fontWeight="500">
-                                    Instagram
+                                    Twitter
                                 </Typography>
                                 <Typography color={medium}>Social Network</Typography>
                             </Box>
