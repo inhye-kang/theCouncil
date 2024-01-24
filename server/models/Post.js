@@ -15,7 +15,7 @@ const postSchema = mongoose.Schema(
             required: true,
         },
         location: String,
-        major: String,
+        description: String,
         picturePath: String,
         userPicturePath: String,
         likes: {
@@ -24,8 +24,8 @@ const postSchema = mongoose.Schema(
         },
         comments: {
             type: Array,
-            default: []
-        }
+            default: [],
+        },
     },
     { timestamps: true }
 );

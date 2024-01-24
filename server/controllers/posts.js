@@ -15,8 +15,8 @@ export const createPost = async (req, res) => {
             userPicturePath: user.picturePath,
             picturePath,
             likes: {},
-            comments: []
-        })
+            comments: [],
+        });
         await newPost.save();
 
         const post = await Post.find();
@@ -24,7 +24,7 @@ export const createPost = async (req, res) => {
     } catch (err) {
         res.status(409).json({ message: err.message });
     }
-}
+};
 
 /* READ */
 export const getFeedPosts = async (req, res) => {
@@ -34,7 +34,7 @@ export const getFeedPosts = async (req, res) => {
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
-}
+};
 
 export const getUserPosts = async (req, res) => {
     try {
@@ -44,7 +44,7 @@ export const getUserPosts = async (req, res) => {
     } catch (err) {
         res.status(404).json({ message: err.message });
     }
-}
+};
 
 /* UPDATE */
 export const likePost = async (req, res) => {
@@ -69,4 +69,4 @@ export const likePost = async (req, res) => {
     } catch (err) {
         res.status(404).json({ message:err.message });
     }
-}
+};

@@ -13,7 +13,7 @@ export const register = async (req, res) => {
         picturePath,
         friends,
         location,
-        major
+        major,
       } = req.body;
       
       const salt = await bcrypt.genSalt();
@@ -29,14 +29,14 @@ export const register = async (req, res) => {
         location,
         major,
         viewedProfile: Math.floor(Math.random() * 10000),
-        impressions: Math.floor(Math.random() * 10000)
+        impressions: Math.floor(Math.random() * 10000),
       });
       const savedUser = await newUser.save();
       res.status(201).json(savedUser);
     } catch(err) {
       res.status(500).json({ error: err.message });
     }
-}
+};
 
 /* LOGGING IN */
 export const login = async (req, res) => {
@@ -54,4 +54,4 @@ export const login = async (req, res) => {
     } catch (err) {
       res.status(500).json({ error: err.message });
     }
-}
+};
